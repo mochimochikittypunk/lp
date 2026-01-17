@@ -8,9 +8,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 password: { label: "Password", type: "password" },
             },
             authorize: async (credentials) => {
-                // Simple hardcoded check for demo purposes
-                // In production, use environment variables or DB user table
-                if (credentials.password === "admin123") {
+                const adminPassword = process.env.ADMIN_PASSWORD
+                if (!adminPassword) {
+                    console.error("ADMIN_PASSWORD not set")
+                    return null
+                }
+                if (credentials.password === adminPassword) {
                     return { id: "1", name: "Admin", email: "admin@example.com" }
                 }
                 return null
