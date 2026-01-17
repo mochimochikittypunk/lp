@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Section {
+  id      String @id @default(cuid())
+  key     String @unique // e.g., "hero_title", "vision_text", "contact_email"
+  content String
+}
+
+model Project {
+  id           String  @id @default(cuid())
+  title        String
+  desc         String
+  url          String
+  thumbnail    String?
+  displayOrder Int     @default(0)
+}
