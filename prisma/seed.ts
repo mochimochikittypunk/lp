@@ -62,31 +62,39 @@ async function main() {
             title: "Coffee Cost Accounting",
             desc: "Streamlit App",
             url: "https://coffeecostaccounting-salvadorcoffee.streamlit.app/",
+            thumbnail: "/projects/coffee-cost.png",
+            displayOrder: 1
         },
         {
             title: "AI Salva Chat",
             desc: "Vercel AI SDK Integration",
             url: "https://ai-salva-chat.vercel.app/",
+            displayOrder: 2
         },
         {
             title: "Roulette Rho One",
             desc: "Interactive Game",
             url: "https://roulette-rho-one.vercel.app/",
+            displayOrder: 3
         },
         {
             title: "Salva Coffee Shindan",
             desc: "Google Sites Project",
             url: "https://sites.google.com/view/salvacoffeeshindan?pli=1",
+            thumbnail: "/projects/coffee-shindan.png",
+            displayOrder: 4
         },
         {
             title: "Super Pacamara Bros",
             desc: "Xmas Edition Game",
             url: "https://super-pacamara-bros-xmas.vercel.app/",
+            displayOrder: 5
         },
         {
             title: "Time Shock",
             desc: "GitHub Pages Game",
             url: "https://mochimochikittypunk.github.io/time-shock/",
+            displayOrder: 6
         }
     ]
 
